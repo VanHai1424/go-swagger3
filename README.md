@@ -29,7 +29,7 @@ Generate [OpenAPI Specification](https://swagger.io/specification) v3 file with 
 ## 1. Install
 
 ```
-go install github.com/parvez3019/go-swagger3@latest
+go install github.com/VanHai1424/go-swagger3@latest
 ```
 
 
@@ -56,10 +56,10 @@ Notes -
 #### Using docker
 ``` shell
 // go.mod and main file are in the same directory
-docker run -t --rm -v $(pwd):/app -w /app parvez3019/go-swagger3:latest --module-path . --output oas.json --schema-without-pkg --generate-yaml true
+docker run -t --rm -v $(pwd):/app -w /app VanHai1424/go-swagger3:latest --module-path . --output oas.json --schema-without-pkg --generate-yaml true
 
 // go.mod and main file are in the different directory
-docker run -t --rm -v $(pwd):/app -w /app parvez3019/go-swagger3:latest --module-path . --main-file-path ./cmd/xxx/main.go --output oas.json --schema-without-pkg --generate-yaml true
+docker run -t --rm -v $(pwd):/app -w /app VanHai1424/go-swagger3:latest --module-path . --main-file-path ./cmd/xxx/main.go --output oas.json --schema-without-pkg --generate-yaml true
 
 Notes - 
 - Pass schema-without-pkg flag as true if you want to generate schemas without package names

@@ -3,8 +3,8 @@ package apis
 import (
 	"errors"
 	"github.com/iancoleman/orderedmap"
-	oas "github.com/parvez3019/go-swagger3/openApi3Schema"
-	"github.com/parvez3019/go-swagger3/parser/schema"
+	oas "github.com/VanHai1424/go-swagger3/openApi3Schema"
+	"github.com/VanHai1424/go-swagger3/parser/schema"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

@@ -1,9 +1,9 @@
 package schema
 
 import (
-	. "github.com/parvez3019/go-swagger3/openApi3Schema"
-	"github.com/parvez3019/go-swagger3/parser/model"
-	"github.com/parvez3019/go-swagger3/parser/utils"
+	. "github.com/VanHai1424/go-swagger3/openApi3Schema"
+	"github.com/VanHai1424/go-swagger3/parser/model"
+	"github.com/VanHai1424/go-swagger3/parser/utils"
 	"go/ast"
 	goParser "go/parser"
 	"go/token"

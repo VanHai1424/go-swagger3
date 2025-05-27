@@ -8,8 +8,8 @@ import (
 
 	"github.com/nsf/jsondiff"
 
-	"github.com/parvez3019/go-swagger3/parser"
-	"github.com/parvez3019/go-swagger3/writer"
+	"github.com/VanHai1424/go-swagger3/parser"
+	"github.com/VanHai1424/go-swagger3/writer"
 	"github.com/stretchr/testify/assert"
 )
 

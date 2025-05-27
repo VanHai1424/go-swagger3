@@ -6,14 +6,11 @@ import (
 	"strings"
 
 	"github.com/iancoleman/orderedmap"
-	oas "github.com/parvez3019/go-swagger3/openApi3Schema"
-	"github.com/parvez3019/go-swagger3/parser/utils"
+	oas "github.com/VanHai1424/go-swagger3/openApi3Schema"
+	"github.com/VanHai1424/go-swagger3/parser/utils"
 )
 
 func (p *parser) parseParamComment(pkgPath, pkgName string, operation *oas.OperationObject, comment string) error {
-	// {name}  {in}  {goType}  {required}  {description}		{example (optional)}
-	// user    body  User      true        "Info of a user."
-	// f       file  ignored   true        "Upload a file." 	"/home/arlet/go-swagger3/main.go"
 	re := regexp.MustCompile(`([-.\w]+)[\s]+([\w]+)[\s]+([\w./\[\]]+)[\s]+([\w]+)[\s]+"([^"]+)"([\s]+"([^"]+)")*`)
 	matches := re.FindStringSubmatch(comment)
 	if len(matches) != 8 && len(matches) != 6 {
@@ -25,19 +22,21 @@ func (p *parser) parseParamComment(pkgPath, pkgName string, operation *oas.Opera
 	appendIn(&parameterObject, matches[2])
 	appendRequired(&parameterObject, matches[4])
 	appendDescription(&parameterObject, matches[5])
-	appendExample(&parameterObject, matches[7]) // 6 group is using for checking if example exist
+	appendExample(&parameterObject, matches[7])
 
 	goType := getType(re, matches)
 
-	// `file`, `form`
-	appendRequestBody(operation, parameterObject, goType)
+	switch parameterObject.In {
+	case "form", "file":
+		appendRequestBody(operation, parameterObject, goType)
+		return nil
 
-	// `path`, `query`, `header`, `cookie`
-	if parameterObject.In != "body" {
+	case "body":
+		return p.parseRequestBody(pkgPath, pkgName, operation, parameterObject, goType, matches)
+
+	default:
 		return p.appendQueryParam(pkgPath, pkgName, operation, parameterObject, goType)
 	}
-
-	return p.parseRequestBody(pkgPath, pkgName, operation, parameterObject, goType, matches)
 }
 
 func (p *parser) parseRequestBody(pkgPath string, pkgName string, operation *oas.OperationObject, parameterObject oas.ParameterObject, goType string, matches []string) error {

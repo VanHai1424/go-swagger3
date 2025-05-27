@@ -41,7 +41,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com.parvez3019.go-swagger3.model.GetRestaurantsResponse"
+                  "$ref": "#/components/schemas/github.com.VanHai1424.go-swagger3.model.GetRestaurantsResponse"
                 }
               }
             }
@@ -94,8 +94,8 @@
             "in": "query",
             "description": "In json format",
             "schema": {
-              "type": "github.com.parvez3019.go-swagger3.model.Filter",
-              "$ref": "#/components/schemas/github.com.parvez3019.go-swagger3.model.Filter"
+              "type": "github.com.VanHai1424.go-swagger3.model.Filter",
+              "$ref": "#/components/schemas/github.com.VanHai1424.go-swagger3.model.Filter"
             }
           },
           {
@@ -134,7 +134,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com.parvez3019.go-swagger3.model.CreateUserResponse"
+                  "$ref": "#/components/schemas/github.com.VanHai1424.go-swagger3.model.CreateUserResponse"
                 }
               }
             }
@@ -158,7 +158,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/github.com.parvez3019.go-swagger3.model.CreateUserRequest"
+                "$ref": "#/components/schemas/github.com.VanHai1424.go-swagger3.model.CreateUserRequest"
               }
             }
           },
@@ -174,7 +174,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com.parvez3019.go-swagger3.handler.GetPogsResponse"
+                  "$ref": "#/components/schemas/github.com.VanHai1424.go-swagger3.handler.GetPogsResponse"
                 }
               }
             }
@@ -184,7 +184,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com.parvez3019.go-swagger3.handler.aliasValidationError"
+                  "$ref": "#/components/schemas/github.com.VanHai1424.go-swagger3.handler.aliasValidationError"
                 }
               }
             }
@@ -194,7 +194,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com.parvez3019.go-swagger3.handler.ErrResponse"
+                  "$ref": "#/components/schemas/github.com.VanHai1424.go-swagger3.handler.ErrResponse"
                 }
               }
             }
@@ -204,7 +204,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/github.com.parvez3019.go-swagger3.handler.ErrResponse"
+                  "$ref": "#/components/schemas/github.com.VanHai1424.go-swagger3.handler.ErrResponse"
                 }
               }
             }
@@ -356,7 +356,7 @@
           }
         }
       },
-      "github.com.parvez3019.go-swagger3.handler.Bar": {
+      "github.com.VanHai1424.go-swagger3.handler.Bar": {
         "type": "object",
         "required": [
           "barField"
@@ -367,7 +367,7 @@
           }
         }
       },
-      "github.com.parvez3019.go-swagger3.handler.EmbeddedBar": {
+      "github.com.VanHai1424.go-swagger3.handler.EmbeddedBar": {
         "type": "object",
         "required": [
           "barField"
@@ -381,7 +381,7 @@
           }
         }
       },
-      "github.com.parvez3019.go-swagger3.handler.ErrResponse": {
+      "github.com.VanHai1424.go-swagger3.handler.ErrResponse": {
         "type": "object",
         "properties": {
           "statusCode": {
@@ -392,7 +392,7 @@
           }
         }
       },
-      "github.com.parvez3019.go-swagger3.handler.GetPogsResponse": {
+      "github.com.VanHai1424.go-swagger3.handler.GetPogsResponse": {
         "type": "object",
         "properties": {
           "planograms": {
@@ -403,15 +403,15 @@
           },
           "field4": {
             "type": "object",
-            "$ref": "#/components/schemas/github.com.parvez3019.go-swagger3.handler.Bar"
+            "$ref": "#/components/schemas/github.com.VanHai1424.go-swagger3.handler.Bar"
           },
           "field5": {
             "type": "object",
-            "$ref": "#/components/schemas/github.com.parvez3019.go-swagger3.handler.EmbeddedBar"
+            "$ref": "#/components/schemas/github.com.VanHai1424.go-swagger3.handler.EmbeddedBar"
           }
         }
       },
-      "github.com.parvez3019.go-swagger3.handler.aliasValidationError": {
+      "github.com.VanHai1424.go-swagger3.handler.aliasValidationError": {
         "type": "object",
         "properties": {
           "statusCode": {
@@ -425,7 +425,7 @@
           }
         }
       },
-      "github.com.parvez3019.go-swagger3.model.CreateUserRequest": {
+      "github.com.VanHai1424.go-swagger3.model.CreateUserRequest": {
         "type": "object",
         "properties": {
           "first_name": {
@@ -468,7 +468,7 @@
           }
         }
       },
-      "github.com.parvez3019.go-swagger3.model.CreateUserResponse": {
+      "github.com.VanHai1424.go-swagger3.model.CreateUserResponse": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -476,7 +476,7 @@
           }
         }
       },
-      "github.com.parvez3019.go-swagger3.model.Filter": {
+      "github.com.VanHai1424.go-swagger3.model.Filter": {
         "type": "object",
         "properties": {
           "rating": {
@@ -493,7 +493,7 @@
           }
         }
       },
-      "github.com.parvez3019.go-swagger3.model.GetRestaurantsResponse": {
+      "github.com.VanHai1424.go-swagger3.model.GetRestaurantsResponse": {
         "type": "object",
         "properties": {
           "restaurants": {
